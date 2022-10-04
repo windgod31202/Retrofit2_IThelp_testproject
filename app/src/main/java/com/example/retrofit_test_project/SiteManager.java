@@ -3,13 +3,13 @@ package com.example.retrofit_test_project;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class LoginSiteManager {
+public class SiteManager {
     // 以Singleton模式建立
-    private static LoginSiteManager mInstance = new LoginSiteManager();
+    private static SiteManager mInstance = new SiteManager ();
 
     private APIService myAPIService;
 
-    private LoginSiteManager() {
+    private SiteManager () {
 
         // 設置baseUrl即要連的網站，addConverterFactory用Gson作為資料處理Converter
         Retrofit retrofit = new Retrofit.Builder()
@@ -21,7 +21,7 @@ public class LoginSiteManager {
 
     }
 
-    public static LoginSiteManager getInstance() {
+    public static SiteManager getInstance() {
         return mInstance;
     }
 

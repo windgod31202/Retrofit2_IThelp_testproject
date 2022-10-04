@@ -9,4 +9,7 @@ public interface APIService {
 
     @GET("posts")
     Call<List<APIResponse>> response();
+
+    @GET("users")
+    Call<List<UsersResponse>> userresponse();
 }
